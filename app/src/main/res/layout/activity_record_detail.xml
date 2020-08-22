@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/include_toolbar_default"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        app:group_background="@color/text_gray"
+        app:group_center="false"
+        app:group_height="28dp"
+        app:group_has_header="false"
+        app:group_text_size="14sp"
+        app:group_text_color="#555555"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/content_background" />
+</LinearLayout>

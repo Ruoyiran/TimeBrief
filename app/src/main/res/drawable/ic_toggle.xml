@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- When selected, use grey -->
+    <item android:drawable="@mipmap/baseline_toggle_on_black_48dp"
+        android:state_checked="true" >
+
+    </item>
+    <!-- When not selected, use white-->
+    <item android:drawable="@mipmap/baseline_toggle_off_black_48dp"
+        android:state_checked="false"/>
+
+</selector>

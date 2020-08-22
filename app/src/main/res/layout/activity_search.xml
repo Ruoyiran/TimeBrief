@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBackground">
+
+    <com.royran.timebrief.ui.views.searchview.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:textSizeSearch="6sp"
+        app:textColorSearch="#9b9b9b"
+        app:textHintSearch="输入查询关键字"
+        app:searchBlockHeight="100"
+        app:searchBlockColor="#ffffff"/>
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/search_block"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="42dp"-->
+<!--        android:orientation="horizontal">-->
+<!--        <ImageView-->
+<!--            android:id="@+id/search_back"-->
+<!--            android:layout_width="38dp"-->
+<!--            android:layout_height="38dp"-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:padding="10dp"-->
+<!--            android:src="@mipmap/bar_icon_back_black" />-->
+<!--        <EditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"/>-->
+
+<!--        <timebrieff.ui.views.searchview.EditText_Clear-->
+<!--            android:id="@+id/et_search"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="fill_parent"-->
+<!--            android:layout_weight="264"-->
+<!--            android:drawablePadding="8dp"-->
+<!--            android:gravity="start|center_vertical"-->
+<!--            android:imeOptions="actionSearch"-->
+<!--            android:singleLine="true"/>-->
+
+<!--    </LinearLayout>-->
+</RelativeLayout>

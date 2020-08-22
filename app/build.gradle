@@ -1,0 +1,144 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'AndResGuard'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.royran.timebrief"
+        minSdkVersion 17
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    andResGuard {
+        // mappingFile = file("./resource_mapping.txt")
+        mappingFile = null
+        use7zip = true
+        useSign = true
+        // 打开这个开关，会keep住所有资源的原始路径，只混淆资源的名字
+        keepRoot = false
+        // 设置这个值，会把arsc name列混淆成相同的名字，减少string常量池的大小
+        fixedResName = "arg"
+        // 打开这个开关会合并所有哈希值相同的资源，但请不要过度依赖这个功能去除去冗余资源
+        mergeDuplicatedRes = true
+        whiteList = [
+                // for your icon
+                "R.drawable.icon",
+                // for fabric
+                "R.string.com.crashlytics.*",
+                // for google-services
+                "R.string.google_app_id",
+                "R.string.gcm_defaultSenderId",
+                "R.string.default_web_client_id",
+                "R.string.ga_trackingId",
+                "R.string.firebase_database_url",
+                "R.string.google_api_key",
+                "R.string.google_crash_reporting_api_key"
+        ]
+        compressFilePattern = [
+                "*.png",
+                "*.jpg",
+                "*.jpeg",
+                "*.gif",
+        ]
+        sevenzip {
+            artifact = 'com.tencent.mm:SevenZip:1.2.17'
+            //path = "/usr/local/bin/7za"
+        }
+
+        /**
+         * 可选： 如果不设置则会默认覆盖assemble输出的apk
+         **/
+         finalApkBackupPath = "${project.rootDir}/final.apk"
+
+        /**
+         * 可选: 指定v1签名时生成jar文件的摘要算法
+         * 默认值为“SHA-1”
+         **/
+         digestalg = "SHA-256"
+    }
+    signingConfigs {
+        debug {
+        }
+        release {
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+        }
+    }
+    buildTypes {
+        debug {
+            // 如果没有提供混淆规则文件，则设置默认的混淆规则文件（SDK/tools/proguard/proguard-android.txt）
+           // pseudoLocalesEnabled true
+            // 显示Log
+            //buildConfigField "boolean", "LOG_DEBUG", "true"
+            //混淆
+            //Zipalign优化
+            //zipAlignEnabled true
+            //minifyEnabled true
+            // 移除无用的resource文件
+            // shrinkResources true
+            //加载默认混淆配置文件
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            //签名
+            signingConfig signingConfigs.debug
+        }
+        release {
+            // 如果没有提供混淆规则文件，则设置默认的混淆规则文件（SDK/tools/proguard/proguard-android.txt）
+            pseudoLocalesEnabled true
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //混淆
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            //加载默认混淆配置文件
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            //签名
+            signingConfig signingConfigs.release
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+            version "3.10.2"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildToolsVersion = '29.0.3'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'org.greenrobot:eventbus:3.2.0'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.orhanobut:logger:2.2.0'
+    implementation "org.permissionsdispatcher:permissionsdispatcher:4.3.1"
+    implementation 'com.afollestad.material-dialogs:commons:0.9.6.0'
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    implementation 'com.jzxiang.pickerview:TimePickerDialog:1.0.1'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.google.protobuf:protobuf-java:3.11.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.7.2'
+    implementation project(':calendarview')
+    implementation project(':popwindow')
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+    annotationProcessor "org.permissionsdispatcher:permissionsdispatcher-processor:4.3.1"
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

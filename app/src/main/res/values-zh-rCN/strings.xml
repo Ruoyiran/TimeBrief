@@ -1,0 +1,97 @@
+<resources>
+    <string name="app_name">TimeBrief</string>
+    <string name="title_backup">备份</string>
+    <string name="title_restore">恢复</string>
+    <string name="backup_data">备份数据</string>
+    <string name="backup_management">备份管理</string>
+    <string name="clear_all">清除数据</string>
+    <string name="edit">编辑</string>
+    <string name="sort_by_time">根据时间排序</string>
+    <string name="sort_by_days">根据天数排序</string>
+    <string name="sort_by_count">根据次数排序</string>
+    <string name="current_version">当前版本</string>
+    <string name="about">关于</string>
+    <string name="about_me">本软件为个人独自开发的用于记录时间的软件，若使用过程中遇到什么问题或有什么建议，请跟我联系。\n\n邮箱: ruoyi_ran@foxmail.com</string>
+    <string name="upload_data">上传数据</string>
+    <string name="download_data">下载数据</string>
+    <string name="list_settings">列表设置</string>
+    <string name="chart_settings">图表设置</string>
+    <string name="start_time">开始时间</string>
+    <string name="end_time">结束时间</string>
+    <string name="all_records">总记录数</string>
+    <string name="ok">确定</string>
+    <string name="custom">自定义</string>
+    <string name="all">全部</string>
+    <string name="day">天</string>
+    <string name="week">周</string>
+    <string name="month">月</string>
+    <string name="quarter">季</string>
+    <string name="year">年</string>
+    <string name="total_events">总事件数</string>
+    <string name="total_time">总时长</string>
+    <string name="time_usage">时间利用率</string>
+    <string name="settings">设置</string>
+    <string name="time_statistics">时间统计</string>
+    <string name="this_week">本周</string>
+    <string name="today">今天</string>
+    <string name="this_quarter">本季</string>
+    <string name="this_month">本月</string>
+    <string name="this_year">今年</string>
+    <string name="hour_short">时</string>
+    <string name="minute_short">分</string>
+    <string name="hour">小时</string>
+    <string name="minute">分钟</string>
+    <string name="desc">描述</string>
+    <string name="time">时间选择</string>
+    <string name="cancel">取消</string>
+    <string name="save_failed">保存失败</string>
+    <string name="save_file_to">文件已保存至: </string>
+    <string name="delete_success">删除成功</string>
+    <string name="delete_failed">删除失败</string>
+    <string name="delete_confirm">确定删除吗?</string>
+    <string name="no_data">无数据</string>
+    <string name="restore_hint">是否从网络云端恢复%1$d条数据？\n(现有数据将被覆盖)</string>
+    <string name="restore_hint2">是否从文件恢复%1$d条数据？\n(现有数据将被覆盖)</string>
+    <string name="restore_success">恢复成功</string>
+    <string name="parse_data_failed">解析数据失败</string>
+    <string name="clear_data_hint">确定清除所有数据吗?</string>
+    <string name="clear_success">所有数据已清除</string>
+    <string name="clear_failed">清除数据失败</string>
+    <string name="download_failed">下载失败</string>
+    <string name="upload_success">上传成功</string>
+    <string name="upload_failed">上传失败</string>
+    <string name="wait">请稍等...</string>
+    <string name="in_request">请求中...</string>
+    <string name="restore_failed">恢复数据失败</string>
+    <string name="read_data_error">读取文件数据失败</string>
+    <string name="no_records">无记录</string>
+    <string name="start_time_error">开始时间不能大于结束时间</string>
+    <string name="end_time_error">结束时间不能小于开始时间</string>
+    <string name="end_date_error">结束日期必须大于开始日期</string>
+    <string name="server">服务器地址: </string>
+    <string name="change_host">修改服务器地址</string>
+    <string name="invalid_link">%s不是一个有效的链接</string>
+    <string-array name="chinese_week_string_array">
+        <item>周日</item>
+        <item>周一</item>
+        <item>周二</item>
+        <item>周三</item>
+        <item>周四</item>
+        <item>周五</item>
+        <item>周六</item>
+    </string-array>
+    <string-array name="chinese_month_string_array">
+        <item>一月</item>
+        <item>二月</item>
+        <item>三月</item>
+        <item>四月</item>
+        <item>五月</item>
+        <item>六月</item>
+        <item>七月</item>
+        <item>八月</item>
+        <item>九月</item>
+        <item>十月</item>
+        <item>十一月</item>
+        <item>十二月</item>
+    </string-array>
+</resources>

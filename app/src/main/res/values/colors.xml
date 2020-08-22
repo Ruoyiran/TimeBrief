@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="white">#fffefefe</color>
+    <color name="red">#ffec452e</color>
+    <color name="text_black">#ff000000</color>
+    <color name="text_black_light">#ff646464</color>
+    <color name="text_gray">#eeeeeeff</color>
+    <color name="text_gray2">#8D8D8D</color>
+    <color name="text_blue">#ff1e6eb7</color>
+    <color name="line_color">#e7e7e7</color>
+    <color name="content_background">#f2f2f2</color>
+    <color name="line_gary">#ffececec</color>
+    <color name="line_gary_header">#ff3672a7</color>
+    <color name="backgroundColorPress">#FAFAFA</color>
+    <color name="text_white">#ffffffff</color>
+    <color name="bg_gray">#ffefefef</color>
+    <color name="trans">#00000000</color>
+    <color name="light_gray">#fff5f5f5</color>
+    <color name="text_title_color">#000</color>
+    <color name="text_week_color">#0A80EB</color>
+    <color name="colorText">#9b9b9b</color>
+    <color name="bar_transparent">#00000000</color>
+    <color name="colorDefault">#ffffff</color>
+    <color name="bar_pressed_black5">#0c000000</color>
+    <color name="bar_pressed_black20">#22000000</color>
+    <color name="colorBackground">#f1f0f6</color>
+    <!-- Custom color -->
+    <color name="Yellow">#ffdd00</color>
+    <color name="White">#fff</color>
+
+    <!-- Color Dialog TotalTime Picker-->
+    <color name="CyanWater">#09b6b3</color>
+</resources>

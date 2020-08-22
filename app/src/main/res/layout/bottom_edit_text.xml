@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#eee"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_bg_edit_text"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edit_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#0000"
+                android:hint="准备做什么？"
+                android:maxLines="4"
+                android:minHeight="36dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="3dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp">
+
+                <ImageView
+                    android:id="@+id/button_place_holder1"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+
+                <ImageView
+                    android:id="@+id/button_place_holder2"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="16dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/image_add"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="centerInside"
+                android:background="@drawable/bar_selector_selectable_white"
+                android:src="@mipmap/baseline_add_black_48dp"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
